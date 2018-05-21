@@ -42,7 +42,7 @@
                 android:width="90dp"
                 android:textStyle="bold"
                 android:textSize="30sp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:gravity="center"/>
 
             <ImageView

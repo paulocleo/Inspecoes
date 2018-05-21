@@ -56,7 +56,7 @@ public class ResultadoActivity extends AppCompatActivity {
                 txtAlerta.setVisibility(View.INVISIBLE);
                 imgAlerta.setVisibility(View.INVISIBLE);
             } else if (valorResult >= 80 && valorResult <= 94) {
-                txtResultado.setBackgroundColor(Color.parseColor("#ffff00"));
+                txtResultado.setBackgroundColor(Color.parseColor("#c7cc00"));
                 checkSim.setChecked(false);
                 checkNao.setChecked(true);
                 txtAlerta.setVisibility(View.INVISIBLE);
