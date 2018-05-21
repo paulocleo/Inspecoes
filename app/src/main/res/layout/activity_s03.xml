@@ -81,28 +81,71 @@
                     android:layout_marginLeft="20dp"/>
             </LinearLayout>
 
-
-            <CheckBox
-                android:text="Os pallets estão em áreas demarcadas?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox2"
-                android:buttonTint="#18b718"
-                android:textSize="16sp" />
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="As pilhas estão firmes e seguras contra desmonoramento?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox1_2_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="Os pallets estão em áreas demarcadas?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkBox"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/checkBox2"
+                    android:buttonTint="#18b718"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/btCamera1_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox2"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox3"
-                android:buttonTint="#18b718"
-                android:textSize="16sp" />
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox1_3_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="As pilhas estão firmes e seguras contra desmonoramento?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkBox2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/checkBox3"
+                    android:buttonTint="#18b718"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/btCamera1_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -131,36 +174,92 @@
                 android:id="@+id/btSelecionaCk2"
                 android:textSize="10dp"/>
 
-            <CheckBox
-                android:text="Os avisos de precaução da Linha estão visíveis e em bom estado? (PERIGO/ATENÇÃO)"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox4"
-                android:buttonTint="#18b718" />
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="As tubulações e outros tipos de condutores possuem as cores de segurança conforme NR26?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox5"
-                android:buttonTint="#18b718" />
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox2_1_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="Caso exista algum equipamento com defeito ou não seguro, está sinalizado?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:text="Os avisos de precaução da Linha estão visíveis e em bom estado? (PERIGO/ATENÇÃO)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox4"
+                    android:buttonTint="#18b718" />
+
+                <ImageView
+                    android:id="@+id/btCamera2_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox6"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718" />
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox2_2_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="As tubulações e outros tipos de condutores possuem as cores de segurança conforme NR26?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox5"
+                    android:buttonTint="#18b718" />
+
+                <ImageView
+                    android:id="@+id/btCamera2_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox2_3_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="Caso exista algum equipamento com defeito ou não seguro, está sinalizado?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox6"
+                    android:buttonTint="#18b718" />
+
+                <ImageView
+                    android:id="@+id/btCamera2_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -189,86 +288,239 @@
                 android:id="@+id/btSelecionaCk3"
                 android:textSize="10dp"/>
 
-            <CheckBox
-                android:text="As afiações estão devidamente isoladas em conduítes ou eletrodutos e livres de emenda?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox7"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="Todos os equipamentos possuem aterramento?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox8"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox3_1_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="As tomadas possuem identificação de voltagem?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox9"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:text="As afiações estão devidamente isoladas em conduítes ou eletrodutos e livres de emenda?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox7"
+                    android:buttonTint="#18b718"/>
 
-            <CheckBox
-                android:text="Os equipamentos elétricos estão protegidos contra umidade / fluidos?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox10"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <ImageView
+                    android:id="@+id/btCamera3_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
 
-            <CheckBox
-                android:text="Os painéis elétricos estão identificados e acessíveis?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox11"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+            </LinearLayout>
 
-            <CheckBox
-                android:text="Os painéis elétricos estão fechados e seguros?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox12"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="As botoeiras dos painéis estão em boas condições?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox13"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox3_2_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="As lâmpadas sinalizadoras estão funcionando em bom estado e estão visíveis?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:text="Todos os equipamentos possuem aterramento?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox8"
+                    android:buttonTint="#18b718"/>
+
+                <ImageView
+                    android:id="@+id/btCamera3_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox14"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox3_3_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="As tomadas possuem identificação de voltagem?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox9"
+                    android:buttonTint="#18b718"/>
+
+                <ImageView
+                    android:id="@+id/btCamera3_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox3_4_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="Os equipamentos elétricos estão protegidos contra umidade / fluidos?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox10"
+                    android:buttonTint="#18b718"/>
+
+                <ImageView
+                    android:id="@+id/btCamera3_4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox3_5_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="Os painéis elétricos estão identificados e acessíveis?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox11"
+                    android:buttonTint="#18b718"/>
+
+                <ImageView
+                    android:id="@+id/btCamera3_5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox3_6_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="Os painéis elétricos estão fechados e seguros?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox12"
+                    android:layout_below="@+id/checkBox4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:buttonTint="#18b718"/>
+
+                <ImageView
+                    android:id="@+id/btCamera3_6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox3_7_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="As botoeiras dos painéis estão em boas condições?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13"
+                    android:buttonTint="#18b718"/>
+
+                <ImageView
+                    android:id="@+id/btCamera3_7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:text="NAO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox3_8_nao"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:text="As lâmpadas sinalizadoras estão funcionando em bom estado e estão visíveis?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox14"
+                    android:buttonTint="#18b718"/>
+
+                <ImageView
+                    android:id="@+id/btCamera3_8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -284,9 +536,6 @@
                 android:text="CHECK LIST PARA PROTEÇÃO CONTRA FOGO (Baseado na NR 23)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="32dp"
                 android:id="@+id/textView6" />
 
@@ -301,9 +550,6 @@
                 android:text="Os extintores portáteis são apropriados?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="10dp"
                 android:id="@+id/checkBox15"
                 android:buttonTint="#18b718"/>
@@ -312,9 +558,6 @@
                 android:text="Áreas para extintores demarcadas e livres?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:id="@+id/checkBox16"
                 android:buttonTint="#18b718"/>
 
@@ -323,9 +566,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox17"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:buttonTint="#18b718"/>
 
             <CheckBox
@@ -333,9 +573,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox18"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:buttonTint="#18b718"/>
 
             <CheckBox
@@ -343,9 +580,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox19"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:buttonTint="#18b718"/>
 
             <CheckBox
@@ -353,9 +587,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox20"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:buttonTint="#18b718"/>
 
             <CheckBox
@@ -363,9 +594,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox21"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:buttonTint="#18b718"/>
 
             <CheckBox
@@ -373,9 +601,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox22"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:buttonTint="#18b718"/>
         </LinearLayout>
 
@@ -391,9 +616,6 @@
                 android:text="CHECK LIST PARA EQUIPAMENTOS E TUBULAÇÕES (Baseado na NR13)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="32dp"
                 android:id="@+id/textView7" />
 
