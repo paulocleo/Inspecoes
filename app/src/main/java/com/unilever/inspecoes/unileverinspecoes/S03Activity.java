@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.Toast;
 
@@ -134,6 +135,8 @@ public class S03Activity extends AppCompatActivity {
     EditText editTextResponsavel;
     EditText editTextData;
     EditText editTextCIPA;
+
+    ImageView btCamera_1_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -294,6 +297,16 @@ public class S03Activity extends AppCompatActivity {
             public void onClick(View view) {
                 checkBox_14_1.setChecked(true);
                 checkBox_14_2.setChecked(true);
+            }
+        });
+
+        //BT CAMERA 1_1
+        btCamera_1_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(S03Activity.this, DetalheFotoActivity.class);
+                in.putExtra("btCamera_1_1", 1);
+                startActivity(in);
             }
         });
 
@@ -464,6 +477,8 @@ public class S03Activity extends AppCompatActivity {
         editTextCIPA = (EditText) findViewById(R.id.editTextCIPA);
         editTextData = (EditText) findViewById(R.id.editTextData);
         editTextResponsavel = (EditText) findViewById(R.id.editTextResponsavel);
+
+        btCamera_1_1 = (ImageView) findViewById(R.id.btCamera1_1);
     }
 
     private Double resultadochecklist1() {
