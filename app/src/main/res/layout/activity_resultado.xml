@@ -99,7 +99,7 @@
 
             <TextView
                 android:id="@+id/idTextAlerta"
-                android:layout_width="wrap_content"
+                android:layout_width="406dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Área precisa de revisão em 48 horas"
@@ -113,6 +113,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviando...Aguarde! "
+                android:layout_gravity="bottom"
+                android:id="@+id/txtAvisoAguarde"/>
 
             <Button
                 android:id="@+id/btResultadoId"

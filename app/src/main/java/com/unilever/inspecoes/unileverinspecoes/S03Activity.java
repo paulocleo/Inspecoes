@@ -305,7 +305,7 @@ public class S03Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(S03Activity.this, DetalheFotoActivity.class);
-                in.putExtra("btCamera_1_1", 1);
+                in.putExtra("btCamera_1_1", "1_1");
                 startActivity(in);
             }
         });
