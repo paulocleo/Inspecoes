@@ -41,7 +41,7 @@ public class DetalheFotoActivity extends AppCompatActivity {
 
         if(bundle != null)
         {
-            codCamera = bundle.getString("btCamera_1_1");
+            codCamera = bundle.getString("btCamera");
         }
 
         inicializaComponentes();
@@ -57,7 +57,6 @@ public class DetalheFotoActivity extends AppCompatActivity {
         btApagarFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Drawable dw = getResources().getDrawable(R.drawable.imgsemimagem);
                 imageViewCamera.setImageDrawable(dw);
             }
@@ -66,7 +65,6 @@ public class DetalheFotoActivity extends AppCompatActivity {
         btVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 onBackPressed();
             }
         });
@@ -82,9 +80,6 @@ public class DetalheFotoActivity extends AppCompatActivity {
         imageViewCamera = (ImageView)findViewById(R.id.imageViewCamera);
 
     }
-
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

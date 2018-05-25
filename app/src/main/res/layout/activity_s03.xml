@@ -95,7 +95,7 @@
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="Os pallets estão em áreas demarcadas?"
+                    android:text="SIM - Os pallets estão em áreas demarcadas?"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/checkBox"
@@ -128,7 +128,7 @@
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="As pilhas estão firmes e seguras contra desmonoramento?"
+                    android:text="SIM - As pilhas estão firmes e seguras contra desmonoramento?"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/checkBox2"
@@ -1355,7 +1355,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/editTextResponsavel"/>
+                android:id="@+id/editTextResponsavel"
+                android:text="testeResponsavel"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -1365,7 +1366,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/editTextData"/>
+                android:id="@+id/editTextData"
+                android:text="testeData"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -1385,13 +1387,15 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/editTextCIPA"/>
+                android:id="@+id/editTextCIPA"
+                android:text="testeCipa"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="OBTER RESULTADO"
-                android:id="@+id/obterResultadoID"/>
+                android:id="@+id/obterResultadoID"
+                />
         </LinearLayout>
 
     </LinearLayout>

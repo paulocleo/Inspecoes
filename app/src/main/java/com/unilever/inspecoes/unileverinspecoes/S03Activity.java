@@ -6,15 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class S03Activity extends AppCompatActivity {
 
+    //region DECLARACAO BUTTON
     Button obterResultado;
     Button btSelecionaCK1;
     Button btSelecionaCK2;
@@ -30,15 +33,27 @@ public class S03Activity extends AppCompatActivity {
     Button btSelecionaCK12;
     Button btSelecionaCK13;
     Button btSelecionaCK14;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 1
     CheckBox checkBox_1_1;
     CheckBox checkBox_1_2;
     CheckBox checkBox_1_3;
+    CheckBox checkBox_1_1_nao;
+    CheckBox checkBox_1_2_nao;
+    CheckBox checkBox_1_3_nao;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 2
     CheckBox checkBox_2_1;
     CheckBox checkBox_2_2;
     CheckBox checkBox_2_3;
+    CheckBox checkBox_2_1_nao;
+    CheckBox checkBox_2_2_nao;
+    CheckBox checkBox_2_3_nao;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 3
     CheckBox checkBox_3_1;
     CheckBox checkBox_3_2;
     CheckBox checkBox_3_3;
@@ -47,7 +62,9 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_3_6;
     CheckBox checkBox_3_7;
     CheckBox checkBox_3_8;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 4
     CheckBox checkBox_4_1;
     CheckBox checkBox_4_2;
     CheckBox checkBox_4_3;
@@ -56,11 +73,15 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_4_6;
     CheckBox checkBox_4_7;
     CheckBox checkBox_4_8;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 5
     CheckBox checkBox_5_1;
     CheckBox checkBox_5_2;
     CheckBox checkBox_5_3;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 6
     CheckBox checkBox_6_1;
     CheckBox checkBox_6_2;
     CheckBox checkBox_6_3;
@@ -68,17 +89,25 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_6_5;
     CheckBox checkBox_6_6;
     CheckBox checkBox_6_7;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 7
     CheckBox checkBox_7_1;
     CheckBox checkBox_7_2;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 8
     CheckBox checkBox_8_1;
     CheckBox checkBox_8_2;
     CheckBox checkBox_8_3;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 9
     CheckBox checkBox_9_1;
     CheckBox checkBox_9_2;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 10
     CheckBox checkBox_10_1;
     CheckBox checkBox_10_2;
     CheckBox checkBox_10_3;
@@ -94,28 +123,38 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_10_13;
     CheckBox checkBox_10_14;
     CheckBox checkBox_10_15;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 11
     CheckBox checkBox_11_1;
     CheckBox checkBox_11_2;
     CheckBox checkBox_11_3;
     CheckBox checkBox_11_4;
     CheckBox checkBox_11_5;
     CheckBox checkBox_11_6;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 12
     CheckBox checkBox_12_1;
     CheckBox checkBox_12_2;
     CheckBox checkBox_12_3;
     CheckBox checkBox_12_4;
     CheckBox checkBox_12_5;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 13
     CheckBox checkBox_13_1;
     CheckBox checkBox_13_2;
     CheckBox checkBox_13_3;
     CheckBox checkBox_13_4;
+    //endregion
 
+    //region DECLARACAO CHECKBOX LISTA 14
     CheckBox checkBox_14_1;
     CheckBox checkBox_14_2;
+    //endregion
 
+    //region DECLARACAO DOUBLE
     Double resultadoTotal;
     Double resultado_check1;
     Double resultado_check2;
@@ -131,20 +170,36 @@ public class S03Activity extends AppCompatActivity {
     Double resultado_check12;
     Double resultado_check13;
     Double resultado_check14;
+    //endregion
 
     EditText editTextResponsavel;
     EditText editTextData;
     EditText editTextCIPA;
 
+    //region DECLARACAO BT CAMERA LISTA 1
     ImageView btCamera_1_1;
+    ImageView btCamera_1_2;
+    ImageView btCamera_1_3;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 2
+    ImageView btCamera_2_1;
+    ImageView btCamera_2_2;
+    ImageView btCamera_2_3;
+    //endregion
+
+    List<String> listaComNao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s03);
 
+        listaComNao = new ArrayList<>();
+
         inicializarComponentes();
 
+        //region EVENTO CLICK BOTAO SELECIONA TUDO
         btSelecionaCK1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -299,17 +354,239 @@ public class S03Activity extends AppCompatActivity {
                 checkBox_14_2.setChecked(true);
             }
         });
+        //endregion
 
+        //region OCULTA CAMERAS
+        btCamera_1_1.setVisibility(View.INVISIBLE);
+        btCamera_1_2.setVisibility(View.INVISIBLE);
+        btCamera_1_3.setVisibility(View.INVISIBLE);
+
+        btCamera_2_1.setVisibility(View.INVISIBLE);
+        btCamera_2_2.setVisibility(View.INVISIBLE);
+        btCamera_2_3.setVisibility(View.INVISIBLE);
+        //endregion
+
+        //region CHECKLIST 1
+        checkBox_1_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    checkBox_1_1_nao.setChecked(false);
+                    btCamera_1_1.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_1_2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    checkBox_1_2_nao.setChecked(false);
+                    btCamera_1_2.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_1_3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    checkBox_1_3_nao.setChecked(false);
+                    btCamera_1_3.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_1_1_nao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                addRemoveCheckNao(b, "1_1");
+                if(b){
+                    checkBox_1_1.setChecked(false);
+                    btCamera_1_1.setVisibility(View.VISIBLE);
+                }
+                else {
+                    btCamera_1_1.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_1_2_nao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                addRemoveCheckNao(b, "1_2");
+                if(b){
+                    checkBox_1_2.setChecked(false);
+                    btCamera_1_2.setVisibility(View.VISIBLE);
+                }
+                else {
+                    btCamera_1_2.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_1_3_nao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                addRemoveCheckNao(b, "1_3");
+                if(b){
+                    checkBox_1_3.setChecked(false);
+                    btCamera_1_3.setVisibility(View.VISIBLE);
+                }
+                else {
+                    btCamera_1_3.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        //region EVENTO CLICK BT CAMERA LISTA 1
         //BT CAMERA 1_1
         btCamera_1_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(S03Activity.this, DetalheFotoActivity.class);
-                in.putExtra("btCamera_1_1", "1_1");
+                in.putExtra("btCamera", "1_1");
                 startActivity(in);
             }
         });
 
+        //BT CAMERA 1_2
+        btCamera_1_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(S03Activity.this, DetalheFotoActivity.class);
+                in.putExtra("btCamera", "1_2");
+                startActivity(in);
+            }
+        });
+
+        //BT CAMERA 1_3
+        btCamera_1_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(S03Activity.this, DetalheFotoActivity.class);
+                in.putExtra("btCamera", "1_3");
+                startActivity(in);
+            }
+        });
+        //endregion
+
+        //endregion
+
+        //region CHECKLIST 2
+        checkBox_2_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    checkBox_2_1_nao.setChecked(false);
+                    btCamera_2_1.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_2_2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    checkBox_2_2_nao.setChecked(false);
+                    btCamera_2_2.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_2_3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    checkBox_2_3_nao.setChecked(false);
+                    btCamera_2_3.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_2_1_nao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                addRemoveCheckNao(b, "2_1");
+                if(b){
+                    checkBox_2_1.setChecked(false);
+                    btCamera_2_1.setVisibility(View.VISIBLE);
+                }
+                else {
+                    btCamera_2_1.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_2_2_nao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                addRemoveCheckNao(b, "2_2");
+                if(b){
+                    checkBox_2_2.setChecked(false);
+                    btCamera_2_2.setVisibility(View.VISIBLE);
+                }
+                else {
+                    btCamera_2_2.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        checkBox_2_3_nao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                addRemoveCheckNao(b, "2_3");
+                if(b){
+                    checkBox_2_3.setChecked(false);
+                    btCamera_2_3.setVisibility(View.VISIBLE);
+                }
+                else {
+                    btCamera_2_3.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        //region EVENTO CLICK BT CAMERA LISTA 2
+        //BT CAMERA 2_1
+        btCamera_2_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(S03Activity.this, DetalheFotoActivity.class);
+                in.putExtra("btCamera", "2_1");
+                startActivity(in);
+            }
+        });
+
+        //BT CAMERA 2_2
+        btCamera_2_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(S03Activity.this, DetalheFotoActivity.class);
+                in.putExtra("btCamera", "2_2");
+                startActivity(in);
+            }
+        });
+
+        //BT CAMERA 2_3
+        btCamera_2_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(S03Activity.this, DetalheFotoActivity.class);
+                in.putExtra("btCamera", "2_3");
+                startActivity(in);
+            }
+        });
+        //endregion
+
+        //endregion
+
+        //region EVENTO CLICK BOTAO RESULTADO
         obterResultado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -364,15 +641,36 @@ public class S03Activity extends AppCompatActivity {
                 else
                 {
                     in.putExtra("resultado", resultadoTotal);
+                    in.putExtra("listaCheckNao", (ArrayList<String>)listaComNao);
                     startActivity(in);
                 }
             }
         });
 
+        //endregion
+
+    }
+
+    private void addRemoveCheckNao(boolean b, String codList) {
+
+        if(b){
+            listaComNao.add(codList);
+        }
+        else{
+            for (String item: listaComNao) {
+                if(item.equals(codList)){
+                    listaComNao.remove(item);
+                    break;
+                }
+            }
+        }
     }
 
     private void inicializarComponentes() {
+
         obterResultado = (Button) findViewById(R.id.obterResultadoID);
+
+        //region INICIALIZA BT SELECIONA
         btSelecionaCK1 = (Button) findViewById(R.id.btSelecionaCk1);
         btSelecionaCK2 = (Button) findViewById(R.id.btSelecionaCk2);
         btSelecionaCK3 = (Button) findViewById(R.id.btSelecionaCk3);
@@ -387,15 +685,27 @@ public class S03Activity extends AppCompatActivity {
         btSelecionaCK12 = (Button) findViewById(R.id.btSelecionaCk12);
         btSelecionaCK13 = (Button) findViewById(R.id.btSelecionaCk13);
         btSelecionaCK14 = (Button) findViewById(R.id.btSelecionaCk14);
+        //endregion
 
-        checkBox_1_1 = (CheckBox) findViewById(R.id.checkBox);
-        checkBox_1_2 = (CheckBox) findViewById(R.id.checkBox2);
-        checkBox_1_3 = (CheckBox) findViewById(R.id.checkBox3);
+        //region INICIALIZA CHECKBOX LISTA 1
+        checkBox_1_1     = (CheckBox) findViewById(R.id.checkBox);
+        checkBox_1_2     = (CheckBox) findViewById(R.id.checkBox2);
+        checkBox_1_3     = (CheckBox) findViewById(R.id.checkBox3);
+        checkBox_1_1_nao = (CheckBox) findViewById(R.id.checkBox1_1_nao);
+        checkBox_1_2_nao = (CheckBox) findViewById(R.id.checkBox1_2_nao);
+        checkBox_1_3_nao = (CheckBox) findViewById(R.id.checkBox1_3_nao);
+        //endregion
 
-        checkBox_2_1 = (CheckBox) findViewById(R.id.checkBox4);
-        checkBox_2_2 = (CheckBox) findViewById(R.id.checkBox5);
-        checkBox_2_3 = (CheckBox) findViewById(R.id.checkBox6);
+        //region INICIALIZA CHECKBOX LISTA 2
+        checkBox_2_1     = (CheckBox) findViewById(R.id.checkBox4);
+        checkBox_2_2     = (CheckBox) findViewById(R.id.checkBox5);
+        checkBox_2_3     = (CheckBox) findViewById(R.id.checkBox6);
+        checkBox_2_1_nao = (CheckBox) findViewById(R.id.checkBox2_1_nao);
+        checkBox_2_2_nao = (CheckBox) findViewById(R.id.checkBox2_2_nao);
+        checkBox_2_3_nao = (CheckBox) findViewById(R.id.checkBox2_3_nao);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 3
         checkBox_3_1 = (CheckBox) findViewById(R.id.checkBox7);
         checkBox_3_2 = (CheckBox) findViewById(R.id.checkBox8);
         checkBox_3_3 = (CheckBox) findViewById(R.id.checkBox9);
@@ -404,7 +714,9 @@ public class S03Activity extends AppCompatActivity {
         checkBox_3_6 = (CheckBox) findViewById(R.id.checkBox12);
         checkBox_3_7 = (CheckBox) findViewById(R.id.checkBox13);
         checkBox_3_8 = (CheckBox) findViewById(R.id.checkBox14);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 4
         checkBox_4_1 = (CheckBox) findViewById(R.id.checkBox15);
         checkBox_4_2 = (CheckBox) findViewById(R.id.checkBox16);
         checkBox_4_3 = (CheckBox) findViewById(R.id.checkBox17);
@@ -413,11 +725,15 @@ public class S03Activity extends AppCompatActivity {
         checkBox_4_6 = (CheckBox) findViewById(R.id.checkBox20);
         checkBox_4_7 = (CheckBox) findViewById(R.id.checkBox21);
         checkBox_4_8 = (CheckBox) findViewById(R.id.checkBox22);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 5
         checkBox_5_1 = (CheckBox) findViewById(R.id.checkBox23);
         checkBox_5_2 = (CheckBox) findViewById(R.id.checkBox24);
         checkBox_5_3 = (CheckBox) findViewById(R.id.checkBox25);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 6
         checkBox_6_1 = (CheckBox) findViewById(R.id.checkBox26);
         checkBox_6_2 = (CheckBox) findViewById(R.id.checkBox27);
         checkBox_6_3 = (CheckBox) findViewById(R.id.checkBox28);
@@ -425,17 +741,25 @@ public class S03Activity extends AppCompatActivity {
         checkBox_6_5 = (CheckBox) findViewById(R.id.checkBox30);
         checkBox_6_6 = (CheckBox) findViewById(R.id.checkBox31);
         checkBox_6_7 = (CheckBox) findViewById(R.id.checkBox32);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 7
         checkBox_7_1 = (CheckBox) findViewById(R.id.checkBox33);
         checkBox_7_2 = (CheckBox) findViewById(R.id.checkBox34);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 8
         checkBox_8_1 = (CheckBox) findViewById(R.id.checkBox35);
         checkBox_8_2 = (CheckBox) findViewById(R.id.checkBox36);
         checkBox_8_3 = (CheckBox) findViewById(R.id.checkBox37);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 9
         checkBox_9_1 = (CheckBox) findViewById(R.id.checkBox38);
         checkBox_9_2 = (CheckBox) findViewById(R.id.checkBox39);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 10
         checkBox_10_1 = (CheckBox) findViewById(R.id.checkBox40);
         checkBox_10_2 = (CheckBox) findViewById(R.id.checkBox41);
         checkBox_10_3 = (CheckBox) findViewById(R.id.checkBox42);
@@ -451,36 +775,55 @@ public class S03Activity extends AppCompatActivity {
         checkBox_10_13 = (CheckBox) findViewById(R.id.checkBox52);
         checkBox_10_14 = (CheckBox) findViewById(R.id.checkBox53);
         checkBox_10_15 = (CheckBox) findViewById(R.id.checkBox54);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 11
         checkBox_11_1 = (CheckBox) findViewById(R.id.checkBox55);
         checkBox_11_2 = (CheckBox) findViewById(R.id.checkBox56);
         checkBox_11_3 = (CheckBox) findViewById(R.id.checkBox57);
         checkBox_11_4 = (CheckBox) findViewById(R.id.checkBox58);
         checkBox_11_5 = (CheckBox) findViewById(R.id.checkBox59);
         checkBox_11_6 = (CheckBox) findViewById(R.id.checkBox60);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 12
         checkBox_12_1 = (CheckBox) findViewById(R.id.checkBox61);
         checkBox_12_2 = (CheckBox) findViewById(R.id.checkBox62);
         checkBox_12_3 = (CheckBox) findViewById(R.id.checkBox63);
         checkBox_12_4 = (CheckBox) findViewById(R.id.checkBox64);
         checkBox_12_5 = (CheckBox) findViewById(R.id.checkBox65);
+        //endregion
 
-
+        //region INICIALIZA CHECKBOX LISTA 13
         checkBox_13_1 = (CheckBox) findViewById(R.id.checkBox66);
         checkBox_13_2 = (CheckBox) findViewById(R.id.checkBox67);
         checkBox_13_3 = (CheckBox) findViewById(R.id.checkBox68);
         checkBox_13_4 = (CheckBox) findViewById(R.id.checkBox69);
+        //endregion
 
+        //region INICIALIZA CHECKBOX LISTA 14
         checkBox_14_1 = (CheckBox) findViewById(R.id.checkBox70);
         checkBox_14_2 = (CheckBox) findViewById(R.id.checkBox71);
+        //endregion
 
+        //region INICIALIZA TEXT
         editTextCIPA = (EditText) findViewById(R.id.editTextCIPA);
         editTextData = (EditText) findViewById(R.id.editTextData);
         editTextResponsavel = (EditText) findViewById(R.id.editTextResponsavel);
+        //endregion
 
+        //region INICIALIZA BT CAMERA
         btCamera_1_1 = (ImageView) findViewById(R.id.btCamera1_1);
+        btCamera_1_2 = (ImageView) findViewById(R.id.btCamera1_2);
+        btCamera_1_3 = (ImageView) findViewById(R.id.btCamera1_3);
+
+        btCamera_2_1 = (ImageView) findViewById(R.id.btCamera2_1);
+        btCamera_2_2 = (ImageView) findViewById(R.id.btCamera2_2);
+        btCamera_2_3 = (ImageView) findViewById(R.id.btCamera2_3);
+        //endregion
     }
 
+    //region METODOS CALULOS RESULTADOS CHECKLIST
     private Double resultadochecklist1() {
         int total = 0;
 
@@ -895,4 +1238,5 @@ public class S03Activity extends AppCompatActivity {
 
         return porcentagem;
     }
+    //endregion
 }
