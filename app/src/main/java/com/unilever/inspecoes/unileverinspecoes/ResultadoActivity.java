@@ -1,12 +1,20 @@
 package com.unilever.inspecoes.unileverinspecoes;
 
+import android.Manifest;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.graphics.Bitmap;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +29,6 @@ import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Image;
@@ -33,7 +40,6 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -44,6 +50,7 @@ import java.util.Date;
 
 public class ResultadoActivity extends AppCompatActivity {
 
+    private static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 2;
     TextView txtResultado;
     int valorResult;
     CheckBox checkSim;
@@ -66,6 +73,10 @@ public class ResultadoActivity extends AppCompatActivity {
 
     Image imageX = null;
     Image imageCheck = null;
+
+    AlertDialog.Builder alerta;
+    boolean isEnvio = false;
+    ProgressDialog progress = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,99 +138,178 @@ public class ResultadoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                txtAvisoAguarde.setVisibility(View.VISIBLE);
-                criandoPdf();
+                prepararArquivos();
             }
         });
     }
 
-    private void criandoPdf() {
+    private void prepararArquivos() {
+
+        if(isOnline()){
+
+            progress = new ProgressDialog(ResultadoActivity.this);
+            progress.setTitle("Enviando");
+            progress.setMessage("Aguarde, enviando relatorio...");
+            progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+            progress.show();
+
+            criandoPdf();
+
+            new EnvioEmailThread().execute();
+
+            //txtAvisoAguarde.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            progress.dismiss();
+            Toast.makeText(this, "Sem conexao com a INTERNET", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private boolean enviarEmail() {
+        Mail m = new Mail("webpcruz@gmail.com", "Cruz2401");
+
+        String[] toArr = {"paulocac_1@hotmail.com", "eduardavero@gmail.com"};
+        m.setTo(toArr);
+
+        m.setFrom("inspecoes@unilever.com.br");
+        m.setSubject("Email de teste do seu app");
+        m.setBody("teste recebeu um email com sucesso!");
 
         try {
+            String filePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/MinhasInspecoes/InspecoesPlanejadas.pdf";
+            m.addAttachment(filePath);//anexo opcional
+            isEnvio = m.send();
 
-            String filename = "InspecoesPlanejadas.pdf";
+            return isEnvio;
 
-            document = new Document(PageSize.A4);
+        }
+        catch(RuntimeException rex){ }//erro ignorado
+        catch(Exception e) {
+            Toast.makeText(getApplicationContext(), "Erro ao enviar email! (" + e.getMessage() + ")", Toast.LENGTH_LONG).show();
+        }
 
-            String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/MinhasInspecoes";
+        return false;
+    }
 
-            File dir = new File(path, filename);
-            if (!dir.exists()) {
-                dir.getParentFile().mkdirs();
+    private boolean isOnline() {
+
+        try {
+            ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo netInfo = cm.getActiveNetworkInfo();
+            return netInfo != null && netInfo.isConnectedOrConnecting();
+        }
+        catch(Exception ex){
+            Toast.makeText(getApplicationContext(), "Erro ao verificar se estava online! (" + ex.getMessage() + ")", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+
+    private void criandoPdf() {
+
+        //region PERMISSAO ARMAZENAMENTO
+        if (ContextCompat.checkSelfPermission(ResultadoActivity.this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            if (ActivityCompat.shouldShowRequestPermissionRationale(ResultadoActivity.this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+
+                ActivityCompat.requestPermissions(ResultadoActivity.this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+
+            } else {
+
+                ActivityCompat.requestPermissions(ResultadoActivity.this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
             }
+        }
+        else
+        {
+            //Entra aqui apos realizacao da permissao de armazenamento.
+            try {
 
-            FileOutputStream fOut = new FileOutputStream(dir);
-            fOut.flush();
+                String filename = "InspecoesPlanejadas.pdf";
 
-            PdfWriter.getInstance(document, fOut);
-            document.open();
-            document.add(new Paragraph("INSPECAO PLANEJADA"));
-            document.add(new Paragraph("Resultado"));
-            document.add(new Paragraph(String.valueOf(valorResult) + "%"));
+                document = new Document(PageSize.A4);
 
-            //region TABLE RESULTADO ESPERADO
-//            Image imageResperado = carregarImagemDrawble(R.drawable.resultado_esperado_img);
-//            document.add(imageResperado);
+                String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/MinhasInspecoes";
 
-            String[][] tableResultadoEsperado =
-                    {{"0% a 79%", "INACEITAVEL"}
-                    ,{"80% a 94%", "BOA"}
-                    ,{"95% a 100%", "EXCELENTE"}
-            };
-            PdfPTable tableResultadoEsperadoPDF = new PdfPTable(2);
-            PdfPCell cellItemPorcentam;
-            PdfPCell cellItemDescricao;
-
-            for (int x=0; x < tableResultadoEsperado.length; x++)
-            {
-                cellItemPorcentam = new PdfPCell(new Phrase(tableResultadoEsperado[x][0]));
-                cellItemDescricao = new PdfPCell(new Phrase(tableResultadoEsperado[x][1]));
-                if(x==0)
-                {
-                    cellItemPorcentam.setBackgroundColor(BaseColor.RED);
-                    cellItemDescricao.setBackgroundColor(BaseColor.RED);
-                }
-                else if(x==1)
-                {
-                    cellItemPorcentam.setBackgroundColor(BaseColor.YELLOW);
-                    cellItemDescricao.setBackgroundColor(BaseColor.YELLOW);
-                }
-                else
-                {
-                    cellItemPorcentam.setBackgroundColor(BaseColor.GREEN);
-                    cellItemDescricao.setBackgroundColor(BaseColor.GREEN);
+                File dir = new File(path, filename);
+                if (!dir.exists()) {
+                    dir.getParentFile().mkdirs();
                 }
 
-                tableResultadoEsperadoPDF.addCell(cellItemPorcentam);
-                tableResultadoEsperadoPDF.addCell(cellItemDescricao);
-            }
+                FileOutputStream fOut = new FileOutputStream(dir);
+                fOut.flush();
 
-            document.add(tableResultadoEsperadoPDF);
-            //endregion
+                PdfWriter.getInstance(document, fOut);
+                document.open();
+                document.add(new Paragraph("INSPECAO PLANEJADA"));
+                document.add(new Paragraph("Resultado"));
+                document.add(new Paragraph(String.valueOf(valorResult) + "%"));
 
-            adicionarCheckListPDF();
+                //region TABLE RESULTADO ESPERADO
+                String[][] tableResultadoEsperado =
+                        {{"0% a 79%", "INACEITAVEL"}
+                                ,{"80% a 94%", "BOA"}
+                                ,{"95% a 100%", "EXCELENTE"}
+                        };
+                PdfPTable tableResultadoEsperadoPDF = new PdfPTable(2);
+                PdfPCell cellItemPorcentam;
+                PdfPCell cellItemDescricao;
+
+                for (int x=0; x < tableResultadoEsperado.length; x++)
+                {
+                    cellItemPorcentam = new PdfPCell(new Phrase(tableResultadoEsperado[x][0]));
+                    cellItemDescricao = new PdfPCell(new Phrase(tableResultadoEsperado[x][1]));
+                    if(x==0)
+                    {
+                        cellItemPorcentam.setBackgroundColor(BaseColor.RED);
+                        cellItemDescricao.setBackgroundColor(BaseColor.RED);
+                    }
+                    else if(x==1)
+                    {
+                        cellItemPorcentam.setBackgroundColor(BaseColor.YELLOW);
+                        cellItemDescricao.setBackgroundColor(BaseColor.YELLOW);
+                    }
+                    else
+                    {
+                        cellItemPorcentam.setBackgroundColor(BaseColor.GREEN);
+                        cellItemDescricao.setBackgroundColor(BaseColor.GREEN);
+                    }
+
+                    tableResultadoEsperadoPDF.addCell(cellItemPorcentam);
+                    tableResultadoEsperadoPDF.addCell(cellItemDescricao);
+                }
+
+                document.add(tableResultadoEsperadoPDF);
+                //endregion
+
+                adicionarCheckListPDF();
 
 //            String imagePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/MinhasInspecoes/foto1.png";
 //            Image image = Image.getInstance(imagePath);
 //            //image.setAbsolutePosition(165f, 465f);
 //            image.scaleToFit(290f,290f);
 //            document.add(image);
+//
+//            Toast.makeText(this, "Relatorio enviado com sucesso!", Toast.LENGTH_SHORT).show();
 
-
-
-            Toast.makeText(this, "Relatorio enviado com sucesso!", Toast.LENGTH_SHORT).show();
-
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            document.close();
-            txtAvisoAguarde.setVisibility(View.INVISIBLE);
+            } catch (DocumentException e) {
+                e.printStackTrace();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                document.close();
+                //txtAvisoAguarde.setVisibility(View.INVISIBLE);
+            }
         }
-
+        //endregion
     }
 
     private void adicionarCheckListPDF() throws DocumentException {
@@ -327,5 +417,62 @@ public class ResultadoActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        switch (requestCode) {
+
+            case MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    criandoPdf();
+
+                } else {
+
+                    Toast.makeText(this, "Eh necessario permissao de ARMAZENAMENTO DO ARQUIVO.", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+
+        }
+    }
+
+    class EnvioEmailThread extends AsyncTask<Void, Void, Boolean> {
+
+
+        @Override
+        protected Boolean doInBackground(Void... voids) {
+
+            boolean retorno = enviarEmail();
+            progress.dismiss();
+
+            return retorno;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean s) {
+            super.onPostExecute(s);
+
+            if(s)
+            {
+                alerta = new AlertDialog.Builder(ResultadoActivity.this);
+                alerta.setTitle("SUCESSO");
+                alerta.setMessage("Relatorio enviado com sucesso");
+                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+
+                alerta.create();
+                alerta.show();
+            }
+        }
     }
 }
