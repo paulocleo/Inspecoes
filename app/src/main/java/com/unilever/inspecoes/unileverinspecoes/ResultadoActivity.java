@@ -169,7 +169,7 @@ public class ResultadoActivity extends AppCompatActivity {
     private boolean enviarEmail() {
         Mail m = new Mail("webpcruz@gmail.com", "Cruz2401");
 
-        String[] toArr = {"paulocac_1@hotmail.com", "eduardavero@gmail.com"};
+        String[] toArr = {"paulocac_1@hotmail.com"/*, "eduardavero@gmail.com"*/};
         m.setTo(toArr);
 
         m.setFrom("inspecoes@unilever.com.br");

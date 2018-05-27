@@ -11,44 +11,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:orientation="vertical">
 
         <TextView
-            android:text="INSPEÇÕES PLANEJADAS - LINHA S03 (HAIR)"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="26dp"
-            android:id="@+id/textView"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:text="INSPEÇÕES PLANEJADAS - LINHA S03 (HAIR)"
             android:textSize="25sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
             android:elevation="2dp"
+            android:orientation="vertical"
             android:weightSum="1">
 
             <TextView
-                android:text="CHECK LIST PARA EMPILHAMENTO E ARMAZENAGEM (Baseado na NR 11)"
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
-                android:id="@+id/textView2"
-                android:layout_below="@+id/textView"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:text="CHECK LIST PARA EMPILHAMENTO E ARMAZENAGEM (Baseado na NR 11)" />
 
             <Button
+                android:id="@+id/btSelecionaCk1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
-                android:id="@+id/btSelecionaCk1"
-                android:textSize="10dp"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,29 +51,30 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox1_1_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox1_1_nao"
                     android:layout_marginTop="10dp"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
+
                 <CheckBox
-                    android:text="SIM - O equipamento utilizado para movimentação (Patinha) possui identificação de carga máxima?"
+                    android:id="@+id/checkBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox"
                     android:layout_marginTop="10dp"
                     android:buttonTint="#18b718"
+                    android:text="SIM - O equipamento utilizado para movimentação (Patinha) possui identificação de carga máxima?"
                     android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/btCamera1_1"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="20dp"/>
+                    android:background="@drawable/camera" />
             </LinearLayout>
 
             <LinearLayout
@@ -87,30 +83,30 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox1_2_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox1_2_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="SIM - Os pallets estão em áreas demarcadas?"
+                    android:id="@+id/checkBox2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/checkBox"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:id="@+id/checkBox2"
+                    android:layout_below="@+id/checkBox"
                     android:buttonTint="#18b718"
+                    android:text="SIM - Os pallets estão em áreas demarcadas?"
                     android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/btCamera1_2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -120,30 +116,30 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox1_3_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox1_3_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="SIM - As pilhas estão firmes e seguras contra desmonoramento?"
+                    android:id="@+id/checkBox3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/checkBox2"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:id="@+id/checkBox3"
+                    android:layout_below="@+id/checkBox2"
                     android:buttonTint="#18b718"
+                    android:text="SIM - As pilhas estão firmes e seguras contra desmonoramento?"
                     android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/btCamera1_3"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -152,27 +148,27 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA SINAIS E AVISOS DE PRECAUÇÃO / SEGURANÇA (Basead na NR 26)"
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/checkBox3"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView3" />
+                android:text="CHECK LIST PARA SINAIS E AVISOS DE PRECAUÇÃO / SEGURANÇA (Basead na NR 26)" />
 
             <Button
+                android:id="@+id/btSelecionaCk2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
-                android:id="@+id/btSelecionaCk2"
-                android:textSize="10dp"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -180,26 +176,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox2_1_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox2_1_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="Os avisos de precaução da Linha estão visíveis e em bom estado? (PERIGO/ATENÇÃO)"
+                    android:id="@+id/checkBox4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox4"
-                    android:buttonTint="#18b718" />
+                    android:buttonTint="#18b718"
+                    android:text="Os avisos de precaução da Linha estão visíveis e em bom estado? (PERIGO/ATENÇÃO)" />
 
                 <ImageView
                     android:id="@+id/btCamera2_1"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -209,26 +205,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox2_2_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox2_2_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="As tubulações e outros tipos de condutores possuem as cores de segurança conforme NR26?"
+                    android:id="@+id/checkBox5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox5"
-                    android:buttonTint="#18b718" />
+                    android:buttonTint="#18b718"
+                    android:text="As tubulações e outros tipos de condutores possuem as cores de segurança conforme NR26?" />
 
                 <ImageView
                     android:id="@+id/btCamera2_2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -238,26 +234,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox2_3_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox2_3_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="Caso exista algum equipamento com defeito ou não seguro, está sinalizado?"
+                    android:id="@+id/checkBox6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox6"
-                    android:buttonTint="#18b718" />
+                    android:buttonTint="#18b718"
+                    android:text="Caso exista algum equipamento com defeito ou não seguro, está sinalizado?" />
 
                 <ImageView
                     android:id="@+id/btCamera2_3"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -266,27 +262,27 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA INSTALAÇÕES E PAINÉIS ELÉTRICOS (Baseado na NR 10)"
+                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/checkBox3"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView4" />
+                android:text="CHECK LIST PARA INSTALAÇÕES E PAINÉIS ELÉTRICOS (Baseado na NR 10)" />
 
             <Button
+                android:id="@+id/btSelecionaCk3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
-                android:id="@+id/btSelecionaCk3"
-                android:textSize="10dp"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -294,26 +290,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox3_1_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox3_1_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="As afiações estão devidamente isoladas em conduítes ou eletrodutos e livres de emenda?"
+                    android:id="@+id/checkBox7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox7"
-                    android:buttonTint="#18b718"/>
+                    android:buttonTint="#18b718"
+                    android:text="As afiações estão devidamente isoladas em conduítes ou eletrodutos e livres de emenda?" />
 
                 <ImageView
                     android:id="@+id/btCamera3_1"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -323,26 +319,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox3_2_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox3_2_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="Todos os equipamentos possuem aterramento?"
+                    android:id="@+id/checkBox8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox8"
-                    android:buttonTint="#18b718"/>
+                    android:buttonTint="#18b718"
+                    android:text="Todos os equipamentos possuem aterramento?" />
 
                 <ImageView
                     android:id="@+id/btCamera3_2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -352,26 +348,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox3_3_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox3_3_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="As tomadas possuem identificação de voltagem?"
+                    android:id="@+id/checkBox9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox9"
-                    android:buttonTint="#18b718"/>
+                    android:buttonTint="#18b718"
+                    android:text="As tomadas possuem identificação de voltagem?" />
 
                 <ImageView
                     android:id="@+id/btCamera3_3"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -381,26 +377,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox3_4_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox3_4_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="Os equipamentos elétricos estão protegidos contra umidade / fluidos?"
+                    android:id="@+id/checkBox10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox10"
-                    android:buttonTint="#18b718"/>
+                    android:buttonTint="#18b718"
+                    android:text="Os equipamentos elétricos estão protegidos contra umidade / fluidos?" />
 
                 <ImageView
                     android:id="@+id/btCamera3_4"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
             </LinearLayout>
 
             <LinearLayout
@@ -409,26 +405,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox3_5_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox3_5_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="Os painéis elétricos estão identificados e acessíveis?"
+                    android:id="@+id/checkBox11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox11"
-                    android:buttonTint="#18b718"/>
+                    android:buttonTint="#18b718"
+                    android:text="Os painéis elétricos estão identificados e acessíveis?" />
 
                 <ImageView
                     android:id="@+id/btCamera3_5"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -438,29 +434,29 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox3_6_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox3_6_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="Os painéis elétricos estão fechados e seguros?"
+                    android:id="@+id/checkBox12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox12"
-                    android:layout_below="@+id/checkBox4"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:buttonTint="#18b718"/>
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Os painéis elétricos estão fechados e seguros?" />
 
                 <ImageView
                     android:id="@+id/btCamera3_6"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -470,26 +466,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox3_7_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox3_7_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="As botoeiras dos painéis estão em boas condições?"
+                    android:id="@+id/checkBox13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox13"
-                    android:buttonTint="#18b718"/>
+                    android:buttonTint="#18b718"
+                    android:text="As botoeiras dos painéis estão em boas condições?" />
 
                 <ImageView
                     android:id="@+id/btCamera3_7"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -499,26 +495,26 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:text="NAO"
+                    android:id="@+id/checkBox3_8_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox3_8_nao"
                     android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:text="As lâmpadas sinalizadoras estão funcionando em bom estado e estão visíveis?"
+                    android:id="@+id/checkBox14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox14"
-                    android:buttonTint="#18b718"/>
+                    android:buttonTint="#18b718"
+                    android:text="As lâmpadas sinalizadoras estão funcionando em bom estado e estão visíveis?" />
 
                 <ImageView
                     android:id="@+id/btCamera3_8"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/camera"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
             </LinearLayout>
 
@@ -527,135 +523,358 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA PROTEÇÃO CONTRA FOGO (Baseado na NR 23)"
+                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView6" />
+                android:text="CHECK LIST PARA PROTEÇÃO CONTRA FOGO (Baseado na NR 23)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk4"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="Os extintores portáteis são apropriados?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox15"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="Áreas para extintores demarcadas e livres?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox16"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="Os extintores possuem identificação? (Água, Pó, C02)"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox17"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox4_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="Extintores inspecionados? Carga e teste hidrostático estão OK?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox18"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Os extintores portáteis são apropriados?" />
 
-            <CheckBox
-                android:text="O hidrante mais próximo está em boas condições? (Conservação / 02 Chaves formiga / 02 Esguinchos)"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox19"
-                android:buttonTint="#18b718"/>
+                <ImageView
+                    android:id="@+id/btCamera4_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
-            <CheckBox
-                android:text="Mangueiras de incêndio protegidas e em bom estado?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox20"
-                android:buttonTint="#18b718"/>
+            </LinearLayout>
 
-            <CheckBox
-                android:text="As portas de saída de emergência encontram-se em boas condições? (Sinalizadas e desobstruídas)"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox21"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="As luminárias de emergência estão funcionando?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:id="@+id/checkBox4_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Áreas para extintores demarcadas e livres?" />
+
+                <ImageView
+                    android:id="@+id/btCamera4_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox22"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox4_3_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Os extintores possuem identificação? (Água, Pó, C02)" />
+
+                <ImageView
+                    android:id="@+id/btCamera4_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox4_4_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Extintores inspecionados? Carga e teste hidrostático estão OK?" />
+
+                <ImageView
+                    android:id="@+id/btCamera4_4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox4_5_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="O hidrante mais próximo está em boas condições? (Conservação / 02 Chaves formiga / 02 Esguinchos)" />
+
+                <ImageView
+                    android:id="@+id/btCamera4_5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox4_6_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Mangueiras de incêndio protegidas e em bom estado?" />
+
+                <ImageView
+                    android:id="@+id/btCamera4_6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox4_7_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="As portas de saída de emergência encontram-se em boas condições? (Sinalizadas e desobstruídas)" />
+
+                <ImageView
+                    android:id="@+id/btCamera4_7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox4_8_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="As luminárias de emergência estão funcionando?" />
+
+                <ImageView
+                    android:id="@+id/btCamera4_8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA EQUIPAMENTOS E TUBULAÇÕES (Baseado na NR13)"
+                android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView7" />
+                android:text="CHECK LIST PARA EQUIPAMENTOS E TUBULAÇÕES (Baseado na NR13)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk5"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="As tubulações estão em boas condições? (fixação das prisilhas e conservação)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox23"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="As tubulações estão livres de vazamento?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox24"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="As tubulações possuem indicador de pressão? (Manômetro)"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:id="@+id/checkBox5_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="As tubulações estão em boas condições? (fixação das prisilhas e conservação)" />
+
+                <ImageView
+                    android:id="@+id/btCamera5_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox25"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox5_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="As tubulações estão livres de vazamento?" />
+
+                <ImageView
+                    android:id="@+id/btCamera5_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox5_3_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="As tubulações possuem indicador de pressão? (Manômetro)" />
+
+                <ImageView
+                    android:id="@+id/btCamera5_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -663,739 +882,1642 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PROTEÇÃO DE MÁQUINAS E PROCEDIMENTOS (Baseado na NR 12)"
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView8" />
+                android:text="CHECK LIST PROTEÇÃO DE MÁQUINAS E PROCEDIMENTOS (Baseado na NR 12)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk6"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="Os equipamentos estão em boas condições de funcionamento? (Conservação e Limpeza)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox26"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text=" As condições das proteções de máquinas estão fixas e adequadas? (De difícil remorção)"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox27"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="Todos os pontos de operação da máquina estão totalmente fechados?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:id="@+id/checkBox6_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Os equipamentos estão em boas condições de funcionamento? (Conservação e Limpeza)" />
+
+                <ImageView
+                    android:id="@+id/btCamera6_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox28"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="Os botões de emergência estão identificados e funcionando?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:id="@+id/checkBox6_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text=" As condições das proteções de máquinas estão fixas e adequadas? (De difícil remorção)" />
+
+                <ImageView
+                    android:id="@+id/btCamera6_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox29"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="Os mesmos encontram-se visíveis e está situado próximo ao operador?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:id="@+id/checkBox6_3_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Todos os pontos de operação da máquina estão totalmente fechados?" />
+
+                <ImageView
+                    android:id="@+id/btCamera6_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox30"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
+                <CheckBox
+                    android:id="@+id/checkBox6_4_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="O check list de Micros de segurança foi realizado?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:id="@+id/checkBox29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Os botões de emergência estão identificados e funcionando?" />
+
+                <ImageView
+                    android:id="@+id/btCamera6_4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox31"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="Os guias de LOTO encontram-se revisados e assinados por todos os funcionários da Linha?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:id="@+id/checkBox6_5_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Os mesmos encontram-se visíveis e está situado próximo ao operador?" />
+
+                <ImageView
+                    android:id="@+id/btCamera6_5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox32"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox6_7_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="O check list de Micros de segurança foi realizado?" />
+
+                <ImageView
+                    android:id="@+id/btCamera6_7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox6_8_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Os guias de LOTO encontram-se revisados e assinados por todos os funcionários da Linha?" />
+
+                <ImageView
+                    android:id="@+id/btCamera6_8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA PASSAGENS E CORREDORES (Baseado na NR 12)"
+                android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/checkBox3"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView9" />
+                android:text="CHECK LIST PARA PASSAGENS E CORREDORES (Baseado na NR 12)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk7"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="Os corredores e passagens possuem largura adequada? (1,20m)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox33"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="Os mesmos encontram-se desobstruídos?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox34"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox7_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Os corredores e passagens possuem largura adequada? (1,20m)" />
+
+                <ImageView
+                    android:id="@+id/btCamera7_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox7_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Os mesmos encontram-se desobstruídos?" />
+
+                <ImageView
+                    android:id="@+id/btCamera7_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA PISO (Baseado na NR 08)"
+                android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView10" />
+                android:text="CHECK LIST PARA PISO (Baseado na NR 08)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk8"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="A área está livre do risco de escorregamento, tropeções ou quedas?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox35"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="A área está livre de vazamentos? (indícios, como por exemplo piso marcado)"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox36"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="A pintura e as condições sanitárias estão adequadas?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:id="@+id/checkBox8_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="A área está livre do risco de escorregamento, tropeções ou quedas?" />
+
+                <ImageView
+                    android:id="@+id/btCamera8_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox37"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox8_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="A área está livre de vazamentos? (indícios, como por exemplo piso marcado)" />
+
+                <ImageView
+                    android:id="@+id/btCamera8_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox8_3_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="A pintura e as condições sanitárias estão adequadas?" />
+
+                <ImageView
+                    android:id="@+id/btCamera8_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA CONDIÇÕES GERAIS  (Baseado na NR 12)"
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView11" />
+                android:text="CHECK LIST PARA CONDIÇÕES GERAIS  (Baseado na NR 12)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk9"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="Lay out e organização da área estão adequados?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox38"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="Identificação e limpeza da área estão adequados?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox39"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox9_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Lay out e organização da área estão adequados?" />
+
+                <ImageView
+                    android:id="@+id/btCamera9_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox9_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox5"
+                    android:buttonTint="#18b718"
+                    android:text="Identificação e limpeza da área estão adequados?" />
+
+                <ImageView
+                    android:id="@+id/btCamera9_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST COMPORTAMENTAL (escolher um funcionário e fazer as perguntas) "
+                android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/checkBox3"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView12" />
+                android:text="CHECK LIST COMPORTAMENTAL (escolher um funcionário e fazer as perguntas)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk10"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="O funcionário está utilizando os EPIs corretamente? Acomodação adequada?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox40"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="O funcionário conhece a Política SHE da empresa e como pode contribuir?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox41"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="O funcionário conhece as Regras de Ouro?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox42"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox10_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="O funcionário conhece e aplica as ARTs de sua área?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox43"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="#18b718"
+                    android:text="O funcionário está utilizando os EPIs corretamente? Acomodação adequada?" />
 
-            <CheckBox
-                android:text="As tesouras estão em boas condições? Manuseadas corretamente?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox44"
-                android:buttonTint="#18b718"/>
+                <ImageView
+                    android:id="@+id/btCamera10_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
 
-            <CheckBox
-                android:text="Observe o trabalho, os funcionários realizam as atividades de forma segura? (Sem desvios)"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox45"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="Reporte de condições inseguras e resolução da área estão bons? Qual a etiqueta mais crítica da área?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox46"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox10_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="Todos os colaboradores participaram do DDSHE? Tem conhecimento sobre o tema?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox47"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="O funcionário conhece a Política SHE da empresa e como pode contribuir?" />
 
-            <CheckBox
-                android:text="Os funcionários conhecem os procedimentos de emergência da empresa?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox48"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <ImageView
+                    android:id="@+id/btCamera10_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
 
-            <CheckBox
-                android:text="Os funcionários conhecem os riscos de sua atividade?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox49"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="Os funcionários possuem ferramentas adequadas?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox50"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox10_3_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="O ambiente de trabalho está adequado? (Iluminação, temperatura...) O que acha o funcionário?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox51"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="O funcionário conhece as Regras de Ouro?" />
 
-            <CheckBox
-                android:text="Os funcionários sabem fazer a coleta seletiva?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox52"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <ImageView
+                    android:id="@+id/btCamera10_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
 
-            <CheckBox
-                android:text="Os funcionários possuem conhecimento em ergonomia?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox53"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+            </LinearLayout>
 
-            <CheckBox
-                android:text="De acordo com a sua opinião e a dos funcionários da área existe algum problema grave?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox54"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_4_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="O funcionário conhece e aplica as ARTs de sua área?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_5_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="As tesouras estão em boas condições? Manuseadas corretamente?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_6_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Observe o trabalho, os funcionários realizam as atividades de forma segura? (Sem desvios)" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_7_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Reporte de condições inseguras e resolução da área estão bons? Qual a etiqueta mais crítica da área?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_8_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Todos os colaboradores participaram do DDSHE? Tem conhecimento sobre o tema?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_9_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Os funcionários conhecem os procedimentos de emergência da empresa?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_10_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Os funcionários conhecem os riscos de sua atividade?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_10"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_11_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Os funcionários possuem ferramentas adequadas?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_11"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_12_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="O ambiente de trabalho está adequado? (Iluminação, temperatura...) O que acha o funcionário?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_12"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_13_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Os funcionários sabem fazer a coleta seletiva?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_13"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_14_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Os funcionários possuem conhecimento em ergonomia?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_14"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox10_15_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="De acordo com a sua opinião e a dos funcionários da área existe algum problema grave?" />
+
+                <ImageView
+                    android:id="@+id/btCamera10_15"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA MEIO AMBIENTE"
+                android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/checkBox3"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView13" />
+                android:text="CHECK LIST PARA MEIO AMBIENTE" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk11"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="Existe coleta seletiva no local?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox55"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="Em caso positivo, está funcionando adequadamente?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox56"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="Existem sinalizações para meio ambiente? (etiquetas, placas)"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox57"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox11_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="Em caso positivo, estão sem boas condições?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox58"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView3"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="#18b718"
+                    android:text="Existe coleta seletiva no local?" />
 
-            <CheckBox
-                android:text="Existe Kit de Emergência, contra vazamentos, próximo à área?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox59"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <ImageView
+                    android:id="@+id/btCamera11_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
 
-            <CheckBox
-                android:text="Em caso positivo, estão completos?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox60"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox11_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox56"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox5"
+                    android:buttonTint="#18b718"
+                    android:text="Em caso positivo, está funcionando adequadamente?" />
+
+                <ImageView
+                    android:id="@+id/btCamera11_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox11_3_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Existem sinalizações para meio ambiente? (etiquetas, placas)" />
+
+                <ImageView
+                    android:id="@+id/btCamera11_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox11_4_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox58"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Em caso positivo, estão sem boas condições?" />
+
+                <ImageView
+                    android:id="@+id/btCamera11_4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox11_5_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox59"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Existe Kit de Emergência, contra vazamentos, próximo à área?" />
+
+                <ImageView
+                    android:id="@+id/btCamera11_5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox11_6_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox4"
+                    android:buttonTint="#18b718"
+                    android:text="Em caso positivo, estão completos?" />
+
+                <ImageView
+                    android:id="@+id/btCamera11_6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
-             <TextView
-                android:text="CHECK LIST PARA QUÍMICOS (Baseado na NBR 14725-4/2014)"
+            <TextView
+                android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/checkBox3"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView14" />
+                android:text="CHECK LIST PARA QUÍMICOS (Baseado na NBR 14725-4/2014)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk12"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="O produto químico que está sendo utilizado é adequado para a tarefa?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox61"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="Existe procedimento na área sobre o manuseio do químico? (Ficha de emergência, FISPQ, LPP)"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox62"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="O químico está identificado? (Diamante de hommel, pictograma)"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox63"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox12_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="O funcionário sabe explicar como manuser o produto de forma segura? (EPI, risco de acidentes e etc)"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox64"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="#18b718"
+                    android:text="O produto químico que está sendo utilizado é adequado para a tarefa?" />
 
-            <CheckBox
-                android:text="O local de armazenamento e o recipiente do produto são adequados?"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/btCamera12_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox65"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox12_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Existe procedimento na área sobre o manuseio do químico? (Ficha de emergência, FISPQ, LPP)" />
+
+                <ImageView
+                    android:id="@+id/btCamera12_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox12_3_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="O químico está identificado? (Diamante de hommel, pictograma)" />
+
+                <ImageView
+                    android:id="@+id/btCamera12_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox12_4_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="O funcionário sabe explicar como manuser o produto de forma segura? (EPI, risco de acidentes e etc)" />
+
+                <ImageView
+                    android:id="@+id/btCamera12_4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox12_5_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="O local de armazenamento e o recipiente do produto são adequados?" />
+
+                <ImageView
+                    android:id="@+id/btCamera12_5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA CHECAR EFETIVIDADE DAS AÇÕES DE INVESTIGAÇÃO (Elemento 14 - SHE FWS)"
+                android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView15" />
+                android:text="CHECK LIST PARA CHECAR EFETIVIDADE DAS AÇÕES DE INVESTIGAÇÃO (Elemento 14 - SHE FWS)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk13"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="Ocorreu algum acidente ou incidentes na área nos últimos 06 meses?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox66"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="As ações acordadas na Investigação foram implementadas?"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox67"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:text="As ações implementadas são efetivas (entrevistas/observação do local e tarefa)?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkBox68"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                <CheckBox
+                    android:id="@+id/checkBox13_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
 
-            <CheckBox
-                android:text="Outras ações podem ser tomadas?"
-                android:layout_width="wrap_content"
+                <CheckBox
+                    android:id="@+id/checkBox66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="#18b718"
+                    android:text="Ocorreu algum acidente ou incidentes na área nos últimos 06 meses?" />
+
+                <ImageView
+                    android:id="@+id/btCamera13_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox69"
-                android:layout_below="@+id/checkBox4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox13_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="As ações acordadas na Investigação foram implementadas?" />
+
+                <ImageView
+                    android:id="@+id/btCamera13_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox13_3_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="As ações implementadas são efetivas (entrevistas/observação do local e tarefa)?" />
+
+                <ImageView
+                    android:id="@+id/btCamera13_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox13_4_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox69"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Outras ações podem ser tomadas?" />
+
+                <ImageView
+                    android:id="@+id/btCamera13_4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="CHECK LIST PARA SISTEMA DE BLOQUEIO (Baseado na NR 12)"
+                android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="32dp"
-                android:id="@+id/textView16" />
+                android:text="CHECK LIST PARA SISTEMA DE BLOQUEIO (Baseado na NR 12)" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selecionar tudo"
                 android:id="@+id/btSelecionaCk14"
-                android:textSize="10dp"/>
-
-            <CheckBox
-                android:text="Existe algum sistema de bloqueio sendo utilizado?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkBox70"
-                android:buttonTint="#18b718"/>
+                android:text="@string/selecionar_tudo"
+                android:textSize="10dp" />
 
-            <CheckBox
-                android:text="Em caso positivo, está sendo utilizado corretamente? (Cadeado + Etiqueta de identificação)"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkBox5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/checkBox71"
-                android:buttonTint="#18b718"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox14_1_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Existe algum sistema de bloqueio sendo utilizado?" />
+
+                <ImageView
+                    android:id="@+id/btCamera14_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox14_2_nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="@string/nao"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#18b718"
+                    android:text="Em caso positivo, está sendo utilizado corretamente? (Cadeado + Etiqueta de identificação)" />
+
+                <ImageView
+                    android:id="@+id/btCamera14_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/camera" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="5dp"
             android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Responsavel Pela Inspecao:*"/>
+                android:text="Responsavel Pela Inspecao:*" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:id="@+id/editTextResponsavel"
-                android:text="testeResponsavel"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="testeResponsavel" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Data da Inspecao:*"/>
+                android:text="Data da Inspecao:*" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:id="@+id/editTextData"
-                android:text="testeData"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="testeData" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Area de SHE"/>
+                android:text="Area de SHE" />
 
             <EditText
+                android:id="@+id/editTextSHE"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/editTextSHE"/>
+                android:layout_height="match_parent" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CIPA:*"/>
+                android:text="CIPA:*" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:id="@+id/editTextCIPA"
-                android:text="testeCipa"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="testeCipa" />
 
             <Button
+                android:id="@+id/obterResultadoID"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="OBTER RESULTADO"
-                android:id="@+id/obterResultadoID"
-                />
+                android:text="OBTER RESULTADO" />
         </LinearLayout>
 
     </LinearLayout>

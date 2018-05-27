@@ -1,5 +1,7 @@
 package com.unilever.inspecoes.unileverinspecoes;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
 import javax.activation.CommandMap;
@@ -127,6 +129,13 @@ public class Mail extends javax.mail.Authenticator {
         BodyPart messageBodyPart = new MimeBodyPart();
         DataSource source = new FileDataSource(filename);
         messageBodyPart.setDataHandler(new DataHandler(source));
+        String[] arrayFilename = filename.split("/");
+        for (String itemNome: arrayFilename) {
+            if(itemNome.contains(".pdf")){
+                filename = itemNome;
+                break;
+            }
+        }
         messageBodyPart.setFileName(filename);
 
         _multipart.addBodyPart(messageBodyPart);

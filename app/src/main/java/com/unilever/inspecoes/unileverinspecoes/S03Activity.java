@@ -1,15 +1,14 @@
 package com.unilever.inspecoes.unileverinspecoes;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TableLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -34,6 +33,8 @@ public class S03Activity extends AppCompatActivity {
     Button btSelecionaCK13;
     Button btSelecionaCK14;
     //endregion
+
+    //region DECLARACAO CHECKBOX
 
     //region DECLARACAO CHECKBOX LISTA 1
     CheckBox checkBox_1_1;
@@ -62,6 +63,14 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_3_6;
     CheckBox checkBox_3_7;
     CheckBox checkBox_3_8;
+    CheckBox checkBox_3_1_nao;
+    CheckBox checkBox_3_2_nao;
+    CheckBox checkBox_3_3_nao;
+    CheckBox checkBox_3_4_nao;
+    CheckBox checkBox_3_5_nao;
+    CheckBox checkBox_3_6_nao;
+    CheckBox checkBox_3_7_nao;
+    CheckBox checkBox_3_8_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 4
@@ -73,12 +82,23 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_4_6;
     CheckBox checkBox_4_7;
     CheckBox checkBox_4_8;
+    CheckBox checkBox_4_1_nao;
+    CheckBox checkBox_4_2_nao;
+    CheckBox checkBox_4_3_nao;
+    CheckBox checkBox_4_4_nao;
+    CheckBox checkBox_4_5_nao;
+    CheckBox checkBox_4_6_nao;
+    CheckBox checkBox_4_7_nao;
+    CheckBox checkBox_4_8_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 5
     CheckBox checkBox_5_1;
     CheckBox checkBox_5_2;
     CheckBox checkBox_5_3;
+    CheckBox checkBox_5_1_nao;
+    CheckBox checkBox_5_2_nao;
+    CheckBox checkBox_5_3_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 6
@@ -89,22 +109,36 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_6_5;
     CheckBox checkBox_6_6;
     CheckBox checkBox_6_7;
+    CheckBox checkBox_6_1_nao;
+    CheckBox checkBox_6_2_nao;
+    CheckBox checkBox_6_3_nao;
+    CheckBox checkBox_6_4_nao;
+    CheckBox checkBox_6_5_nao;
+    CheckBox checkBox_6_6_nao;
+    CheckBox checkBox_6_7_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 7
     CheckBox checkBox_7_1;
     CheckBox checkBox_7_2;
+    CheckBox checkBox_7_1_nao;
+    CheckBox checkBox_7_2_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 8
     CheckBox checkBox_8_1;
     CheckBox checkBox_8_2;
     CheckBox checkBox_8_3;
+    CheckBox checkBox_8_1_nao;
+    CheckBox checkBox_8_2_nao;
+    CheckBox checkBox_8_3_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 9
     CheckBox checkBox_9_1;
     CheckBox checkBox_9_2;
+    CheckBox checkBox_9_1_nao;
+    CheckBox checkBox_9_2_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 10
@@ -123,6 +157,21 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_10_13;
     CheckBox checkBox_10_14;
     CheckBox checkBox_10_15;
+    CheckBox checkBox_10_1_nao;
+    CheckBox checkBox_10_2_nao;
+    CheckBox checkBox_10_3_nao;
+    CheckBox checkBox_10_4_nao;
+    CheckBox checkBox_10_5_nao;
+    CheckBox checkBox_10_6_nao;
+    CheckBox checkBox_10_7_nao;
+    CheckBox checkBox_10_8_nao;
+    CheckBox checkBox_10_9_nao;
+    CheckBox checkBox_10_10_nao;
+    CheckBox checkBox_10_11_nao;
+    CheckBox checkBox_10_12_nao;
+    CheckBox checkBox_10_13_nao;
+    CheckBox checkBox_10_14_nao;
+    CheckBox checkBox_10_15_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 11
@@ -132,6 +181,12 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_11_4;
     CheckBox checkBox_11_5;
     CheckBox checkBox_11_6;
+    CheckBox checkBox_11_1_nao;
+    CheckBox checkBox_11_2_nao;
+    CheckBox checkBox_11_3_nao;
+    CheckBox checkBox_11_4_nao;
+    CheckBox checkBox_11_5_nao;
+    CheckBox checkBox_11_6_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 12
@@ -140,6 +195,11 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_12_3;
     CheckBox checkBox_12_4;
     CheckBox checkBox_12_5;
+    CheckBox checkBox_12_1_nao;
+    CheckBox checkBox_12_2_nao;
+    CheckBox checkBox_12_3_nao;
+    CheckBox checkBox_12_4_nao;
+    CheckBox checkBox_12_5_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 13
@@ -147,11 +207,19 @@ public class S03Activity extends AppCompatActivity {
     CheckBox checkBox_13_2;
     CheckBox checkBox_13_3;
     CheckBox checkBox_13_4;
+    CheckBox checkBox_13_1_nao;
+    CheckBox checkBox_13_2_nao;
+    CheckBox checkBox_13_3_nao;
+    CheckBox checkBox_13_4_nao;
     //endregion
 
     //region DECLARACAO CHECKBOX LISTA 14
     CheckBox checkBox_14_1;
     CheckBox checkBox_14_2;
+    CheckBox checkBox_14_1_nao;
+    CheckBox checkBox_14_2_nao;
+    //endregion
+
     //endregion
 
     //region DECLARACAO DOUBLE
@@ -172,9 +240,13 @@ public class S03Activity extends AppCompatActivity {
     Double resultado_check14;
     //endregion
 
+    //region DECLARACAO EDITTEXT
     EditText editTextResponsavel;
     EditText editTextData;
     EditText editTextCIPA;
+    //endregion
+
+    //region DECLARACAO IMAGEVIEW
 
     //region DECLARACAO BT CAMERA LISTA 1
     ImageView btCamera_1_1;
@@ -186,6 +258,108 @@ public class S03Activity extends AppCompatActivity {
     ImageView btCamera_2_1;
     ImageView btCamera_2_2;
     ImageView btCamera_2_3;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 3
+    ImageView btCamera_3_1;
+    ImageView btCamera_3_2;
+    ImageView btCamera_3_3;
+    ImageView btCamera_3_4;
+    ImageView btCamera_3_5;
+    ImageView btCamera_3_6;
+    ImageView btCamera_3_7;
+    ImageView btCamera_3_8;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 4
+    ImageView btCamera_4_1;
+    ImageView btCamera_4_2;
+    ImageView btCamera_4_3;
+    ImageView btCamera_4_4;
+    ImageView btCamera_4_5;
+    ImageView btCamera_4_6;
+    ImageView btCamera_4_7;
+    ImageView btCamera_4_8;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 5
+    ImageView btCamera_5_1;
+    ImageView btCamera_5_2;
+    ImageView btCamera_5_3;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 6
+    ImageView btCamera_6_1;
+    ImageView btCamera_6_2;
+    ImageView btCamera_6_3;
+    ImageView btCamera_6_4;
+    ImageView btCamera_6_5;
+    ImageView btCamera_6_6;
+    ImageView btCamera_6_7;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 7
+    ImageView btCamera_7_1;
+    ImageView btCamera_7_2;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 8
+    ImageView btCamera_8_1;
+    ImageView btCamera_8_2;
+    ImageView btCamera_8_3;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 9
+    ImageView btCamera_9_1;
+    ImageView btCamera_9_2;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 10
+    ImageView btCamera_10_1;
+    ImageView btCamera_10_2;
+    ImageView btCamera_10_3;
+    ImageView btCamera_10_4;
+    ImageView btCamera_10_5;
+    ImageView btCamera_10_6;
+    ImageView btCamera_10_7;
+    ImageView btCamera_10_8;
+    ImageView btCamera_10_9;
+    ImageView btCamera_10_10;
+    ImageView btCamera_10_11;
+    ImageView btCamera_10_12;
+    ImageView btCamera_10_13;
+    ImageView btCamera_10_14;
+    ImageView btCamera_10_15;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 11
+    ImageView btCamera_11_1;
+    ImageView btCamera_11_2;
+    ImageView btCamera_11_3;
+    ImageView btCamera_11_4;
+    ImageView btCamera_11_5;
+    ImageView btCamera_11_6;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 12
+    ImageView btCamera_12_1;
+    ImageView btCamera_12_2;
+    ImageView btCamera_12_3;
+    ImageView btCamera_12_4;
+    ImageView btCamera_12_5;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 13
+    ImageView btCamera_13_1;
+    ImageView btCamera_13_2;
+    ImageView btCamera_13_3;
+    ImageView btCamera_13_4;
+    //endregion
+
+    //region DECLARACAO BT CAMERA LISTA 14
+    ImageView btCamera_14_1;
+    ImageView btCamera_14_2;
+    //endregion
     //endregion
 
     List<String> listaComNao;
@@ -364,6 +538,39 @@ public class S03Activity extends AppCompatActivity {
         btCamera_2_1.setVisibility(View.INVISIBLE);
         btCamera_2_2.setVisibility(View.INVISIBLE);
         btCamera_2_3.setVisibility(View.INVISIBLE);
+
+//        btCamera_3_1.setVisibility(View.INVISIBLE);
+//        btCamera_3_2.setVisibility(View.INVISIBLE);
+//        btCamera_3_3.setVisibility(View.INVISIBLE);
+//        btCamera_3_4.setVisibility(View.INVISIBLE);
+//        btCamera_3_5.setVisibility(View.INVISIBLE);
+//        btCamera_3_6.setVisibility(View.INVISIBLE);
+//        btCamera_3_7.setVisibility(View.INVISIBLE);
+//        btCamera_3_8.setVisibility(View.INVISIBLE);
+//
+//        btCamera_4_1.setVisibility(View.INVISIBLE);
+//        btCamera_4_2.setVisibility(View.INVISIBLE);
+//        btCamera_4_3.setVisibility(View.INVISIBLE);
+//        btCamera_4_4.setVisibility(View.INVISIBLE);
+//        btCamera_4_5.setVisibility(View.INVISIBLE);
+//        btCamera_4_6.setVisibility(View.INVISIBLE);
+//        btCamera_4_7.setVisibility(View.INVISIBLE);
+//        btCamera_4_8.setVisibility(View.INVISIBLE);
+//
+//        btCamera_5_1.setVisibility(View.INVISIBLE);
+//        btCamera_5_2.setVisibility(View.INVISIBLE);
+//        btCamera_5_3.setVisibility(View.INVISIBLE);
+//
+//        btCamera_6_1.setVisibility(View.INVISIBLE);
+//        btCamera_6_2.setVisibility(View.INVISIBLE);
+//        btCamera_6_3.setVisibility(View.INVISIBLE);
+//        btCamera_6_4.setVisibility(View.INVISIBLE);
+//        btCamera_6_5.setVisibility(View.INVISIBLE);
+//        btCamera_6_6.setVisibility(View.INVISIBLE);
+//        btCamera_6_7.setVisibility(View.INVISIBLE);
+//
+//        btCamera_7_1.setVisibility(View.INVISIBLE);
+//        btCamera_7_2.setVisibility(View.INVISIBLE);
         //endregion
 
         //region CHECKLIST 1
@@ -615,7 +822,7 @@ public class S03Activity extends AppCompatActivity {
 
                 resultadoTotal = resultadoTotal/14;
 
-                ArrayList<String> arrayValidacao = new ArrayList<String>();
+                ArrayList<String> arrayValidacao = new ArrayList<>();
                 if(editTextResponsavel.getText().toString().equals(""))
                 {
                     arrayValidacao.add("Campo: Responsável Pela Inspeção é obrigatório.\n");
@@ -631,12 +838,12 @@ public class S03Activity extends AppCompatActivity {
 
                 if(arrayValidacao.size() > 0)
                 {
-                    String textoValidacao = "";
+                    StringBuilder textoValidacao = new StringBuilder();
                     for (String msg : arrayValidacao)
                     {
-                        textoValidacao = textoValidacao + msg;
+                        textoValidacao.append(msg);
                     }
-                    Toast.makeText(S03Activity.this, textoValidacao, Toast.LENGTH_LONG).show();
+                    Toast.makeText(S03Activity.this, textoValidacao.toString(), Toast.LENGTH_LONG).show();
                 }
                 else
                 {
@@ -840,9 +1047,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/3D;
-
-        return porcentagem;
+        return total/3D;
     }
 
     private Double resultadochecklist2() {
@@ -861,9 +1066,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/3D;
-
-        return porcentagem;
+        return total/3D;
     }
 
     private Double resultadochecklist3() {
@@ -905,9 +1108,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/8D;
-
-        return porcentagem;
+        return total/8D;
     }
 
     private Double resultadochecklist4() {
@@ -946,9 +1147,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/8D;
-
-        return porcentagem;
+        return total/8D;
     }
 
     private Double resultadochecklist5() {
@@ -967,9 +1166,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/3D;
-
-        return porcentagem;
+        return total/3D;
     }
 
     private Double resultadochecklist6() {
@@ -1004,9 +1201,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/7D;
-
-        return porcentagem;
+        return total/7D;
     }
 
     private Double resultadochecklist7() {
@@ -1021,9 +1216,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/2D;
-
-        return porcentagem;
+        return total/2D;
     }
 
     private Double resultadochecklist8() {
@@ -1042,9 +1235,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/3D;
-
-        return porcentagem;
+        return total/3D;
     }
 
     private Double resultadochecklist9() {
@@ -1059,9 +1250,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/2D;
-
-        return porcentagem;
+        return total/2D;
     }
 
     private Double resultadochecklist10() {
@@ -1130,9 +1319,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/15D;
-
-        return porcentagem;
+        return total/15D;
     }
 
     private Double resultadochecklist11() {
@@ -1163,9 +1350,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/6D;
-
-        return porcentagem;
+        return total/6D;
     }
 
     private Double resultadochecklist12() {
@@ -1192,9 +1377,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/5D;
-
-        return porcentagem;
+        return total/5D;
     }
 
     private Double resultadochecklist13() {
@@ -1217,9 +1400,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/4D;
-
-        return porcentagem;
+        return total/4D;
     }
 
     private Double resultadochecklist14() {
@@ -1234,9 +1415,7 @@ public class S03Activity extends AppCompatActivity {
             total++;
         }
 
-        Double porcentagem = total/2D;
-
-        return porcentagem;
+        return total/2D;
     }
     //endregion
 }

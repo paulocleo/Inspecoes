@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Inspeções</string>
+    <string name="nao">NAO</string>
+    <string name="selecionar_tudo">Selecionar tudo</string>
 </resources>
