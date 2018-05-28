@@ -1,9 +1,8 @@
 package com.unilever.inspecoes.unileverinspecoes;
 
-import java.sql.Array;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
+
 import javax.activation.CommandMap;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;

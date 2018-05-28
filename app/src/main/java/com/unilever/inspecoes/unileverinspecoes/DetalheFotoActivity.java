@@ -1,19 +1,17 @@
 package com.unilever.inspecoes.unileverinspecoes;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
-import android.media.Image;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,11 +20,9 @@ import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.Calendar;
 import java.util.Date;
 
 public class DetalheFotoActivity extends AppCompatActivity {
@@ -53,6 +49,8 @@ public class DetalheFotoActivity extends AppCompatActivity {
         }
 
         inicializaComponentes();
+
+        imageViewCamera.setVisibility(View.INVISIBLE);
 
         btTirarFoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,6 +142,7 @@ public class DetalheFotoActivity extends AppCompatActivity {
 
         Bitmap bitmap = (Bitmap) data.getExtras().get("data");
         imageViewCamera.setImageBitmap(bitmap);
+        imageViewCamera.setVisibility(View.VISIBLE);
 
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);

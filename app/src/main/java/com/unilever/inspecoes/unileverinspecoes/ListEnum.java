@@ -1,7 +1,5 @@
 package com.unilever.inspecoes.unileverinspecoes;
 
-import java.util.ArrayList;
-
 public class ListEnum {
 
     public final String[][] CheckList_1 =

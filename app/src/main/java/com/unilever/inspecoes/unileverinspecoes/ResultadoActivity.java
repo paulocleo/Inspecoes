@@ -11,12 +11,12 @@ import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -57,7 +57,6 @@ public class ResultadoActivity extends AppCompatActivity {
     CheckBox checkNao;
     ImageView imgAlerta;
     TextView txtAlerta;
-    TextView txtAvisoAguarde;
 
     Button btEnviarRelatorio;
 
@@ -99,9 +98,6 @@ public class ResultadoActivity extends AppCompatActivity {
         txtAlerta         = (TextView) findViewById(R.id.idTextAlerta);
         imgAlerta         = (ImageView) findViewById(R.id.idImgAlerta);
         btEnviarRelatorio = (Button) findViewById(R.id.btResultadoId);
-        txtAvisoAguarde   = (TextView) findViewById(R.id.txtAvisoAguarde);
-
-        txtAvisoAguarde.setVisibility(View.INVISIBLE);
 
         if(resultado != null) {
 
@@ -156,8 +152,6 @@ public class ResultadoActivity extends AppCompatActivity {
             criandoPdf();
 
             new EnvioEmailThread().execute();
-
-            //txtAvisoAguarde.setVisibility(View.VISIBLE);
         }
         else
         {
@@ -167,12 +161,12 @@ public class ResultadoActivity extends AppCompatActivity {
     }
 
     private boolean enviarEmail() {
-        Mail m = new Mail("webpcruz@gmail.com", "Cruz2401");
+        Mail m = new Mail("unilever.app.mobile@gmail.com", "unileverapp54321");
 
         String[] toArr = {"paulocac_1@hotmail.com"/*, "eduardavero@gmail.com"*/};
         m.setTo(toArr);
 
-        m.setFrom("inspecoes@unilever.com.br");
+        m.setFrom("unilever.app.mobile@gmail.com");
         m.setSubject("Email de teste do seu app");
         m.setBody("teste recebeu um email com sucesso!");
 
@@ -314,10 +308,20 @@ public class ResultadoActivity extends AppCompatActivity {
 
     private void adicionarCheckListPDF() throws DocumentException {
 
-        //CheckList 1
         addChecklist(listaEnumCheckAll.CheckList_1);
         addChecklist(listaEnumCheckAll.CheckList_2);
-
+        addChecklist(listaEnumCheckAll.CheckList_3);
+        addChecklist(listaEnumCheckAll.CheckList_4);
+        addChecklist(listaEnumCheckAll.CheckList_5);
+        addChecklist(listaEnumCheckAll.CheckList_6);
+        addChecklist(listaEnumCheckAll.CheckList_7);
+        addChecklist(listaEnumCheckAll.CheckList_8);
+        addChecklist(listaEnumCheckAll.CheckList_9);
+        addChecklist(listaEnumCheckAll.CheckList_10);
+        addChecklist(listaEnumCheckAll.CheckList_11);
+        addChecklist(listaEnumCheckAll.CheckList_12);
+        addChecklist(listaEnumCheckAll.CheckList_13);
+        addChecklist(listaEnumCheckAll.CheckList_14);
     }
 
     private void addChecklist(String[][] checkList) throws DocumentException {
@@ -463,7 +467,7 @@ public class ResultadoActivity extends AppCompatActivity {
                 alerta = new AlertDialog.Builder(ResultadoActivity.this);
                 alerta.setTitle("SUCESSO");
                 alerta.setMessage("Relatorio enviado com sucesso");
-                alerta.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                alerta.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 

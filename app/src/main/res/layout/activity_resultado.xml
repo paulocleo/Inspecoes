@@ -114,13 +114,6 @@
             android:layout_gravity="right"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Enviando...Aguarde! "
-                android:layout_gravity="bottom"
-                android:id="@+id/txtAvisoAguarde"/>
-
             <Button
                 android:id="@+id/btResultadoId"
                 android:layout_width="wrap_content"

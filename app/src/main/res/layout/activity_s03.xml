@@ -1056,7 +1056,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox6_7_nao"
+                    android:id="@+id/checkBox6_6_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:buttonTint="@android:color/holo_red_dark"
@@ -1074,7 +1074,7 @@
                     android:text="O check list de Micros de segurança foi realizado?" />
 
                 <ImageView
-                    android:id="@+id/btCamera6_7"
+                    android:id="@+id/btCamera6_6"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="20dp"
@@ -1087,7 +1087,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox6_8_nao"
+                    android:id="@+id/checkBox6_7_nao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:buttonTint="@android:color/holo_red_dark"
@@ -1105,7 +1105,7 @@
                     android:text="Os guias de LOTO encontram-se revisados e assinados por todos os funcionários da Linha?" />
 
                 <ImageView
-                    android:id="@+id/btCamera6_8"
+                    android:id="@+id/btCamera6_7"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="20dp"
@@ -1429,7 +1429,6 @@
                     android:id="@+id/checkBox40"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:buttonTint="#18b718"
                     android:text="O funcionário está utilizando os EPIs corretamente? Acomodação adequada?" />
 
@@ -1571,9 +1570,6 @@
                     android:id="@+id/checkBox45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Observe o trabalho, os funcionários realizam as atividades de forma segura? (Sem desvios)" />
 
@@ -1602,9 +1598,6 @@
                     android:id="@+id/checkBox46"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Reporte de condições inseguras e resolução da área estão bons? Qual a etiqueta mais crítica da área?" />
 
@@ -1633,9 +1626,6 @@
                     android:id="@+id/checkBox47"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Todos os colaboradores participaram do DDSHE? Tem conhecimento sobre o tema?" />
 
@@ -1664,9 +1654,6 @@
                     android:id="@+id/checkBox48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Os funcionários conhecem os procedimentos de emergência da empresa?" />
 
@@ -1695,9 +1682,6 @@
                     android:id="@+id/checkBox49"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Os funcionários conhecem os riscos de sua atividade?" />
 
@@ -1726,9 +1710,6 @@
                     android:id="@+id/checkBox50"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Os funcionários possuem ferramentas adequadas?" />
 
@@ -1908,10 +1889,6 @@
                     android:id="@+id/checkBox55"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView3"
-                    android:layout_marginTop="10dp"
                     android:buttonTint="#18b718"
                     android:text="Existe coleta seletiva no local?" />
 
@@ -1940,9 +1917,6 @@
                     android:id="@+id/checkBox56"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox5"
                     android:buttonTint="#18b718"
                     android:text="Em caso positivo, está funcionando adequadamente?" />
 
@@ -1971,9 +1945,6 @@
                     android:id="@+id/checkBox57"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Existem sinalizações para meio ambiente? (etiquetas, placas)" />
 
@@ -2002,9 +1973,6 @@
                     android:id="@+id/checkBox58"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Em caso positivo, estão sem boas condições?" />
 
@@ -2033,9 +2001,6 @@
                     android:id="@+id/checkBox59"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Existe Kit de Emergência, contra vazamentos, próximo à área?" />
 
@@ -2064,9 +2029,6 @@
                     android:id="@+id/checkBox60"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/checkBox4"
                     android:buttonTint="#18b718"
                     android:text="Em caso positivo, estão completos?" />
 
@@ -2091,9 +2053,6 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/checkBox3"
                 android:layout_marginTop="32dp"
                 android:text="CHECK LIST PARA QUÍMICOS (Baseado na NBR 14725-4/2014)" />
 
@@ -2121,7 +2080,6 @@
                     android:id="@+id/checkBox61"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:buttonTint="#18b718"
                     android:text="O produto químico que está sendo utilizado é adequado para a tarefa?" />
 
@@ -2286,7 +2244,6 @@
                     android:id="@+id/checkBox66"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:buttonTint="#18b718"
                     android:text="Ocorreu algum acidente ou incidentes na área nos últimos 06 meses?" />
 
