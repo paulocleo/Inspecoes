@@ -29,6 +29,7 @@ import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Image;
@@ -36,6 +37,7 @@ import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -241,9 +243,22 @@ public class ResultadoActivity extends AppCompatActivity {
 
                 PdfWriter.getInstance(document, fOut);
                 document.open();
-                document.add(new Paragraph("INSPECAO PLANEJADA"));
-                document.add(new Paragraph("Resultado"));
-                document.add(new Paragraph(String.valueOf(valorResult) + "%"));
+                document.add(new Paragraph("UNILEVER"));
+                Paragraph titulo = new Paragraph();
+                titulo.add(new Phrase("INSPECOES PLANEJADAS - LINHA S03 (HAIR)"));
+                titulo.setAlignment(Element.ALIGN_CENTER);
+                document.add(new Paragraph(titulo));
+                document.add(new Paragraph("\n"));
+                Paragraph desResultado = new Paragraph();
+                desResultado.add(new Phrase("RESULTADO"));
+                desResultado.setAlignment(Element.ALIGN_CENTER);
+                document.add(new Paragraph(desResultado));
+
+                Paragraph desPorcentagem = new Paragraph();
+                desPorcentagem.add(new Phrase(String.valueOf(valorResult) + "%"));
+                desPorcentagem.setAlignment(Element.ALIGN_CENTER);
+                document.add(new Paragraph(desPorcentagem));
+                document.add(new Paragraph("\n"));
 
                 //region TABLE RESULTADO ESPERADO
                 String[][] tableResultadoEsperado =
@@ -282,15 +297,9 @@ public class ResultadoActivity extends AppCompatActivity {
                 document.add(tableResultadoEsperadoPDF);
                 //endregion
 
-                adicionarCheckListPDF();
+                document.add(new Paragraph("\n"));
 
-//            String imagePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/MinhasInspecoes/foto1.png";
-//            Image image = Image.getInstance(imagePath);
-//            //image.setAbsolutePosition(165f, 465f);
-//            image.scaleToFit(290f,290f);
-//            document.add(image);
-//
-//            Toast.makeText(this, "Relatorio enviado com sucesso!", Toast.LENGTH_SHORT).show();
+                adicionarCheckListPDF();
 
             } catch (DocumentException e) {
                 e.printStackTrace();
@@ -300,7 +309,6 @@ public class ResultadoActivity extends AppCompatActivity {
                 e.printStackTrace();
             } finally {
                 document.close();
-                //txtAvisoAguarde.setVisibility(View.INVISIBLE);
             }
         }
         //endregion
@@ -385,6 +393,7 @@ public class ResultadoActivity extends AppCompatActivity {
 
         table.setWidthPercentage(100f);
         document.add(table);
+        document.add(new Paragraph("\n"));
     }
 
 //    private Image carregarImagemDrawble(int idDrawableImagem) {
